@@ -25,16 +25,18 @@
         openIOS();
         console.log("Linux OS detected");
     } else if (userAgent.indexOf("Android") != -1) {
+        openIOS();
         console.log("Android OS detected");
     } else if (userAgent.indexOf("iOS") != -1 || userAgent.indexOf("iPhone") != -1 || userAgent.indexOf("iPad") != -1) {
         openIOS();
         console.log("iOS detected");
     } else {
+        openIOS();
         console.log("Unknown OS detected");
     }
-    
-    function openIOS(){
-        window.location.href = 'locagoapp://?latitude=&longitude='
+
+    function openIOS() {
+        window.location.href = 'locagoapp://locahost' + window.location.search
     }
 </script>
 </body>
