@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="info">
+
+</div>
+<script>
+    // Get the user agent string
+    var userAgent = navigator.userAgent;
+    let html = '';
+    // Check for patterns specific to different operating systems
+    if (userAgent.indexOf("Win") != -1) {
+        console.log("Windows OS detected");
+    } else if (userAgent.indexOf("Mac") != -1) {
+        openIOS();
+        console.log("macOS detected");
+    } else if (userAgent.indexOf("Linux") != -1) {
+        openIOS();
+        console.log("Linux OS detected");
+    } else if (userAgent.indexOf("Android") != -1) {
+        console.log("Android OS detected");
+    } else if (userAgent.indexOf("iOS") != -1 || userAgent.indexOf("iPhone") != -1 || userAgent.indexOf("iPad") != -1) {
+        openIOS();
+        console.log("iOS detected");
+    } else {
+        console.log("Unknown OS detected");
+    }
+    
+    function openIOS(){
+        window.location.href = 'locagoapp://?latitude=&longitude='
+    }
+</script>
+</body>
+</html>
